@@ -7,7 +7,7 @@ type MainProps = {
 
 export function Main({ children }: MainProps) {
 	return (
-		<main role='main' className={styles["main"]}>
+		<main role='main' className={styles["Main"]}>
 			{children}
 		</main>
 	);

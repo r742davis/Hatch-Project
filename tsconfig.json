@@ -27,6 +27,9 @@
       "@/components": [
         "app/_components"
       ],
+      "@/icons": [
+        "app/_icons"
+      ],
       "@/styles": [
         "app/_styles"
       ]

@@ -5,29 +5,3 @@
 	flex-flow: column nowrap;
 	min-height: var(--viewport-height);
 }
-
-.heading-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-flow: column nowrap;
-	padding-block: var(--padding-medium);
-	width: 100%;
-	text-align: center;
-}
-
-.Section {
-}
-
-.CardList {
-	list-style: none;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	gap: 2rem;
-
-	> * {
-		flex: 1;
-	}
-}
