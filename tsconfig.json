@@ -29,8 +29,9 @@
       ],
       "@/styles": [
         "app/_styles"
-      ],
-    }
+      ]
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -39,12 +40,12 @@
     ".next/types/**/*.ts",
     "build/types/**/*.ts",
     "./next.config.mjs",
-    "./app/**/*",
+    "./app/**/*"
   ],
   "exclude": [
     "node_modules",
     "build",
     "dist",
-    "next.config.mjs",
+    "next.config.mjs"
   ]
 }
