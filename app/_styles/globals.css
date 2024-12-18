@@ -7,16 +7,19 @@
 	--gap-medium: 1.6rem;
 	--gap-large: 2.4rem;
 
-	--primary-light: #8abdff;
-	--primary: #6d5dfc;
-	--primary-dark: #5b0eeb;
+	--primary-light: color(display-p3 0.67451 0.717647 0.815686 / 1);
+	--primary: color(display-p3 0.345098 0.435294 0.631373 / 1);
+	--primary-dark: color(display-p3 0.172549 0.219608 0.317647 / 1);
 
-	--white: #ffffff;
-	--greyLight-1: #e4ebf5;
-	--greyLight-2: #c8d0e7;
-	--greyDark: #181f0b;
 	--color-text: hsl(222deg 22% 5%);
 	--color-text-hover: hsl(222deg 22% 20%);
+
+	--background-color: var(--white);
+	--card-background-color: color(display-p3 0.945098 0.933333 0.92549 / 1);
+
+	--white: #ffffff;
+	--grey-1: #e4ebf5;
+	--grey-2: #c8d0e7;
 
 	--mint-1: color(display-p3 0.98 0.995 0.992);
 	--mint-2: color(display-p3 0.957 0.985 0.977);
@@ -71,8 +74,7 @@ body {
 	margin: 0;
 	color: var(--color-text);
 	font-size: 1.6rem;
-	background: radial-gradient(ellipse at 100% 100%, hsl(254 100% 6% / 0.07), var(--violet-a1), transparent),
-		linear-gradient(to bottom right, var(--mint-2), var(--indigo-2), var(--pink-3), var(--cyan-3));
+	background: var(--background-color);
 }
 
 a {

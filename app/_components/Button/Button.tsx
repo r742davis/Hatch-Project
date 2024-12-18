@@ -40,7 +40,7 @@ export function Button({
 	return (
 		<button
 			type={type}
-			className={cn(styles["button"], styles[variant], styles[size], {
+			className={cn(styles["Button"], styles[variant], styles[size], {
 				[`${className}`]: !!className,
 				disabled: styles["disabled"],
 			})}
