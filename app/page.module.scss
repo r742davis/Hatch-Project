@@ -1,0 +1,17 @@
+.not-found {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+	min-height: var(--viewport-height);
+}
+
+.heading-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+	padding-block: var(--padding-medium);
+	width: 100%;
+	text-align: center;
+}

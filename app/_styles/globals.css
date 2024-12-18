@@ -1,0 +1,119 @@
+:root {
+	--viewport-height: calc(100vh - var(--header-height) - var(--viewport-padding));
+	--viewport-padding: 4vw;
+	--border-radius: 1.2rem;
+
+	--gap-small: 0.8rem;
+	--gap-medium: 1.6rem;
+	--gap-large: 2.4rem;
+
+	--primary-light: #8abdff;
+	--primary: #6d5dfc;
+	--primary-dark: #5b0eeb;
+
+	--white: #ffffff;
+	--greyLight-1: #e4ebf5;
+	--greyLight-2: #c8d0e7;
+	--greyDark: #181f0b;
+	--color-text: hsl(222deg 22% 5%);
+	--color-text-hover: hsl(222deg 22% 20%);
+
+	--mint-1: color(display-p3 0.98 0.995 0.992);
+	--mint-2: color(display-p3 0.957 0.985 0.977);
+
+	--indigo-1: color(display-p3 0.992 0.992 0.996);
+	--indigo-2: color(display-p3 0.971 0.977 0.998);
+
+	--pink-1: color(display-p3 0.998 0.989 0.996);
+	--pink-2: color(display-p3 0.992 0.97 0.985);
+	--pink-3: color(display-p3 0.981 0.917 0.96);
+
+	--cyan-1: color(display-p3 0.982 0.992 0.996);
+	--cyan-2: color(display-p3 0.955 0.981 0.984);
+	--cyan-3: color(display-p3 0.888 0.965 0.975);
+
+	--violet-a1: color(display-p3 0.349 0.024 0.675/0.012);
+
+	--article-max-width: 920px;
+	--header-height: 50px;
+}
+
+@media screen and (max-width: 37.5rem) {
+	:root {
+		--gap-small: 0.4rem;
+		--gap-medium: 0.8rem;
+		--gap-large: 1.2rem;
+	}
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	color: var(--color-text);
+	font-size: 1.6rem;
+	background: radial-gradient(ellipse at 100% 100%, hsl(254 100% 6% / 0.07), var(--violet-a1), transparent),
+		linear-gradient(to bottom right, var(--mint-2), var(--indigo-2), var(--pink-3), var(--cyan-3));
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: var(--color-text-hover);
+	text-decoration: underline;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	appearance: none;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	cursor: pointer;
+}
+
+button:disabled {
+	cursor: default;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type="number"] {
+	-moz-appearance: textfield;
+}
+
+@import url(./typography.css);
