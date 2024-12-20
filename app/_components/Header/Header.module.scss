@@ -1,0 +1,11 @@
+.Header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: var(--header-height);
+	max-width: var(--max-width);
+	margin-inline: auto;
+	position: fixed;
+	top: 0;
+}

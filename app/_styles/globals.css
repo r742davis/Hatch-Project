@@ -1,6 +1,7 @@
 :root {
 	--viewport-height: calc(100vh - var(--header-height) - var(--viewport-padding));
 	--viewport-padding: 4vw;
+	--header-height: 100px;
 	--max-width: 1880px;
 	--border-radius: 1.2rem;
 
@@ -37,8 +38,6 @@
 	--cyan-3: color(display-p3 0.888 0.965 0.975);
 
 	--violet-a1: color(display-p3 0.349 0.024 0.675/0.012);
-
-	--header-height: 50px;
 }
 
 @media screen and (max-width: 37.5rem) {
