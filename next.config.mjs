@@ -13,7 +13,7 @@ const nextConfig = {
 	},
 	distDir: "build",
 	experimental: {
-		cssChunking: "loose",
+		cssChunking: true,
 	},
 	modularizeImports: {
 		"@/components": {
@@ -28,6 +28,7 @@ const nextConfig = {
 		config.resolve.alias = {
 			...config.resolve.alias,
 			"@/components": resolve("./app/_components"),
+			"@/icons": resolve("./app/_icons"),
 			"@/styles": resolve("./app/_styles"),
 		};
 

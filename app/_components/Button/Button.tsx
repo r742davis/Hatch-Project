@@ -1,4 +1,5 @@
 import { useCallback, MouseEvent } from "react";
+import Link from "next/link";
 import cn from "classnames";
 import styles from "./Button.module.scss";
 
@@ -10,9 +11,10 @@ type ButtonProps = {
 	className?: string;
 	disabled?: boolean;
 	size?: ButtonSize;
-	type?: "button" | "submit" | "reset";
 	variant?: ButtonVariant;
-	onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+	href?: string;
+	type?: "button" | "submit" | "reset";
+	onClick?: (event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
 };
 
 export function Button({
@@ -20,12 +22,13 @@ export function Button({
 	className,
 	disabled = false,
 	size = "medium",
-	type = "button",
 	variant = "primary",
+	href,
+	type = "button",
 	onClick,
 }: ButtonProps) {
 	const handleClick = useCallback(
-		(event: MouseEvent<HTMLButtonElement>) => {
+		(event: MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
 			if (disabled) {
 				event.preventDefault();
 				return;
@@ -37,15 +40,21 @@ export function Button({
 		[disabled, onClick]
 	);
 
+	const classNames = cn(styles["Button"], styles[variant], styles[size], {
+		[`${className}`]: !!className,
+		disabled: styles["disabled"],
+	});
+
+	if (href) {
+		return (
+			<Link className={classNames} href={href} onClick={handleClick} aria-disabled={disabled} passHref>
+				{children}
+			</Link>
+		);
+	}
+
 	return (
-		<button
-			type={type}
-			className={cn(styles["button"], styles[variant], styles[size], {
-				[`${className}`]: !!className,
-				disabled: styles["disabled"],
-			})}
-			onClick={handleClick}
-			disabled={disabled}>
+		<button type={type} className={classNames} onClick={handleClick} disabled={disabled}>
 			{children}
 		</button>
 	);

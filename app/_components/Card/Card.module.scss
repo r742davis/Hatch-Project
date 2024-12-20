@@ -1,0 +1,18 @@
+.Card {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	row-gap: 1.5rem;
+	border-radius: 1rem;
+	height: 250px;
+	background-color: var(--card-background-color);
+
+	svg {
+		height: 3em;
+	}
+
+	p {
+		text-align: center;
+	}
+}
