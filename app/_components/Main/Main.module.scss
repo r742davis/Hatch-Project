@@ -1,12 +1,12 @@
 .Main {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	gap: var(--gap-large);
 	width: 100%;
 	margin-inline: auto;
 	min-height: var(--viewport-height);
-	padding-top: calc((var(--header-height) + var(--viewport-padding)));
+	padding-top: var(--header-height);
 	scroll-padding-top: 500px;
 }

@@ -1,0 +1,19 @@
+$breakpoints: (
+	sm: 640px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+	xxl: 1536px,
+);
+
+@mixin breakpoint($size) {
+	$width: map-get($breakpoints, $size);
+
+	@if $width {
+		@media (min-width: #{$width}) {
+			@content;
+		}
+	} @else {
+		@error "Unknown breakpoint #{$size}.";
+	}
+}

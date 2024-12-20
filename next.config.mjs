@@ -29,7 +29,6 @@ const nextConfig = {
 			...config.resolve.alias,
 			"@/components": resolve("./app/_components"),
 			"@/icons": resolve("./app/_icons"),
-			"@/styles": resolve("./app/_styles"),
 		};
 
 		return config;

@@ -30,9 +30,6 @@
       "@/icons": [
         "app/_icons"
       ],
-      "@/styles": [
-        "app/_styles"
-      ]
     },
     "target": "ES2017"
   },

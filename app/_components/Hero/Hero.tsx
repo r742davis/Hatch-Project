@@ -22,7 +22,12 @@ export function Hero() {
 					</Button>
 				</div>
 			</div>
-			<Image className={styles["Image"]} src={heroImage} alt='Woman in bed raising arms up as if waking up' />
+			<Image
+				className={styles["Image"]}
+				src={heroImage}
+				alt='Woman in bed raising arms up as if waking up'
+				loading='eager'
+			/>
 		</section>
 	);
 }
