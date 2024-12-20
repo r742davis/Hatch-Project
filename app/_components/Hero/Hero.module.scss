@@ -1,3 +1,5 @@
+@import "/app/_styles/breakpoints";
+
 .Hero {
 	display: grid;
 	position: relative;
@@ -10,9 +12,10 @@
 .ContentContainer {
 	grid-area: 1 / 1;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(10%, 1fr));
-	grid-template-rows: repeat(2, 1fr);
-	align-items: flex-end;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	align-items: center;
+	padding: var(--viewport-padding);
 	width: 100%;
 	z-index: 2;
 }
@@ -22,7 +25,7 @@
 	flex-flow: column;
 	align-items: flex-start;
 	gap: 1.6rem;
-	max-width: clamp(25%, 25vw, 50%);
+	max-width: 100%;
 	margin: 0 auto;
 
 	p {
@@ -40,4 +43,19 @@
 	left: 0;
 	top: 0;
 	z-index: 1;
+}
+
+@include breakpoint(md) {
+	.ContentContainer {
+		grid-template-columns: repeat(2, minmax(10%, 1fr));
+		grid-template-rows: repeat(2, 1fr);
+		align-items: flex-end;
+		justify-items: center;
+		padding: unset;
+	}
+
+	.Content {
+		max-width: clamp(35%, 40vw, 50%);
+		margin: 0;
+	}
 }
